@@ -1,6 +1,6 @@
 {
-	"name": "kb-layout-switcher",
-	"displayName": "Keyboard Layout Switcher",
+	"name": "keyswitch",
+	"displayName": "KeySwitch",
 	"description": "Changes the keyboard layout of the selected text.",
 	"version": "0.2.0",
 	"publisher": "crims0n",
@@ -27,13 +27,13 @@
 		"опечатка"
 	],
 	"activationEvents": [
-		"onCommand:kb-layout-switcher.switch"
+		"onCommand:keyswitch.switch"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "kb-layout-switcher.switch",
+				"command": "keyswitch.switch",
 				"title": "Switch Layout"
 			}
 		],
@@ -41,7 +41,7 @@
 			"editor/context": [
 				{
 					"when": "editorHasSelection",
-					"command": "kb-layout-switcher.switch",
+					"command": "keyswitch.switch",
 					"group": "navigation"
 				}
 			]
@@ -49,7 +49,7 @@
 		"configuration": {
 			"title": "Keyboard Layout Switcher",
 			"properties": {
-				"kb-layout-switcher.activeLayout": {
+				"keyswitch.activeLayout": {
 					"type": "string",
 					"default": "ru-en",
 					"description": "Select the active keyboard layout pair for conversion.",

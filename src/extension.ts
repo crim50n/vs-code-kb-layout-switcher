@@ -63,7 +63,7 @@ class SwitchLayoutHoverProvider implements vscode.HoverProvider {
         if (!editor || editor.selection.isEmpty || !editor.selection.contains(position)) {
             return;
         }
-        const markdown = new vscode.MarkdownString(`[Switch Layout](command:kb-layout-switcher.switch "Switch keyboard layout")`);
+        const markdown = new vscode.MarkdownString(`[Switch Layout](command:keyswitch.switch "Switch keyboard layout")`);
         markdown.isTrusted = true;
         return new vscode.Hover(markdown, editor.selection);
     }
@@ -73,14 +73,14 @@ class SwitchLayoutHoverProvider implements vscode.HoverProvider {
 // --- Activation Function ---
 
 export function activate(context: vscode.ExtensionContext) {
-    const switchCommand = vscode.commands.registerCommand('kb-layout-switcher.switch', () => {
+    const switchCommand = vscode.commands.registerCommand('keyswitch.switch', () => {
         const editor = vscode.window.activeTextEditor;
         if (!editor || editor.selection.isEmpty) {
             return;
         }
 
         // --- NEW: Load layout from settings ---
-        const config = vscode.workspace.getConfiguration('kb-layout-switcher');
+        const config = vscode.workspace.getConfiguration('keyswitch');
         const activeLayoutKey = config.get<string>('activeLayout', 'ru-en'); // Default to 'ru-en'
         const layoutPair = LAYOUT_PAIRS[activeLayoutKey];
 

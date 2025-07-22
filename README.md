@@ -42,7 +42,7 @@ You can configure the active keyboard layout pair for conversion:
 
 - Open **Settings** (`Ctrl+,` or `Cmd+,`).
 - Search for `Keyboard Layout Switcher`.
-- Change the **Active Layout** (`kb-layout-switcher.activeLayout`) to one of:
+- Change the **Active Layout** (`keyswitch.activeLayout`) to one of:
   - `ru-en` — Russian (ЙЦУКЕН) ↔ English (QWERTY)
   - `ua-en` — Ukrainian (ІЇЄ) ↔ English (QWERTY)
   - `de-qwertz` — German (QWERTZ) ↔ English (QWERTY)
